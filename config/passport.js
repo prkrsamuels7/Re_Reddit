@@ -9,22 +9,20 @@ passport.use(
       clientSecret: process.env.GOOGLE_SECRET,
       callbackURL:  process.env.GOOGLE_CALLBACK
     },
-    function(accessToken, refreshToken, profile, cb) {
-      User.findOne({ googleId: profile.id }).then(async function(user) {
-        if (user) return cb(null, user);
-        try {
-          user = await User.create({
-            name: profile.displayName,
-            googleId: profile.id,
-            email: profile.emails[0].value,
-            avatar: profile.photos[0].value
-          });
-          return cb(null, user);
-        }
-        catch (err) {
-          return cb(err);
-        };
-      });
+    async function(accessToken, refreshToken, profile, cb) {
+      let user = await User.findOne({ googleId: profile.id });
+      if (user) return cb(null, user);
+      try {
+        user = await User.create({
+          name: profile.displayName,
+          googleId: profile.id,
+          email: profile.emails[0].value,
+          avatar: profile.photos[0].value
+        });
+        return cb(null, user);
+      } catch (err) {
+        return cb(err);
+      }
     }
   )
 );
@@ -37,22 +35,3 @@ passport.deserializeUser(async (userId, cb) => {
   const user = User.findById(userId);
   cb(null, user);
 })
-
-
-// async function (accessToken, refreshToken, profile, cb) {
-//   const user = await User.findOne({ googleId: profile.id });
-//   async function (user) {
-//     if (user) return cb(null, user);
-//     try {
-//       user = await User.create({
-//         name: profile.displayName,
-//         googleId: profile.id,
-//         email: profile.emails[0].value,
-//         avatar: profile.photos[0].value
-//       });
-//       return cb(null, user);
-//     } catch (err) {
-//       return cb(err) ;
-//     }
-//   }
-// }

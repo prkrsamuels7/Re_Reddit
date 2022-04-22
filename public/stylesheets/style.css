@@ -1,19 +1,70 @@
+:root {
+  --main-bg-color: #EAE7DC;
+  --nav-color: #E85A4F;
+  --nav-text-color: #3e3e3e;
+  --text-color: #8E8D8A;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  max-width: 1200px;
+  font-family: 'Helvetica';
+  background-color: var(--main-bg-color);
 }
 
-a {
-  color: #00B7FF;
+a, ul, p, h1, h2, h3 {
+  text-decoration: none;
 }
 
-.login {
+nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 34px;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 
-.login img {
-  height: 30px;
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 5px;
+  color: var(--nav-text-color);
+  text-align: center;
+  margin-right: 10px;
+}
+
+nav li {
+  padding: 5px;
+  list-style: none;
+  border: 1px solid var(--main-bg-color);
+  font-size: 10px
+}
+
+nav li:not(:first-child) {
+  border-left: none;
+}
+
+nav li:hover{
+  border: 1px solid #3e3e3e;
+  background-color: var(--nav-color);
+}
+
+nav a {
+  color: var(--nav-text-color);
+}
+
+nav a:hover {
+  color: white;
+}
+
+.site-title {
+  margin-left: 20px;
 }
