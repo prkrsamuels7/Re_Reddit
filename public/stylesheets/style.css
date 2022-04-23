@@ -84,4 +84,29 @@ nav a {
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
+  padding-right: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-template-rows: 150px 150px;
+  column-gap: 3rem;
+  row-gap: 3rem;
+  margin-top: 6rem;
+  justify-content: center;
+}
+.container > * {
+  border: 1px solid var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #D8C3A5;
+  color: #E85A4F;
+}
+
+.container > *:hover {
+  background-color: #E98074;
+  color: var(--main-bg-color)
 }

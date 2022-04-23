@@ -5,8 +5,12 @@
   <div class="nav-links">
     <a href="/" class="center">HOME</a>
     <a href="/topics" class="center">TOPICS</a>
-    <a href="/auth/google" class="center">LOG IN</a>
-    <a href="/logout" class="center">LOGOUT</a>
+    <% if (user) { %>
+      <a href="/logout" class="center">LOGOUT</a>
+    <% } else { %>
+      <a href="/auth/google" class="center">LOG IN</a>
+    <% } %>
+       
   </div>
 </nav>
 <!-- <div class="sidebar"></div> -->

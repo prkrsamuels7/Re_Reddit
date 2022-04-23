@@ -1,0 +1,13 @@
+<%- include('../partials/header.ejs') %> 
+<%- include('../partials/nav.ejs') %> 
+<div class="container">
+  <% topics.forEach(topic => { %>
+    <a href="" class="topic">
+      <!-- <div class="topic"> -->
+        <%- topic.title %> 
+      <!-- </div> -->
+    </a>
+  <% }) %>
+</div>
+<!-- <a href="/topics/new">Add a New Topic</a> -->
+<%- include('../partials/footer.ejs') %> 
