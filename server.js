@@ -14,6 +14,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 var topicsRouter = require('./routes/topics');
 var threadsRouter = require('./routes/threads');
+const commentsRouter = require('./routes/comments');
 
 var app = express();
 
@@ -39,9 +40,12 @@ app.use((req, res, next) => {
   next();
 });
 
+const isLoggedIn =require('./config/auth');
+
 app.use('/', indexRouter);
 app.use('/topics', topicsRouter);
-app.use('/', threadsRouter);
+app.use('/', isLoggedIn, threadsRouter);
+app.use('/', commentsRouter);
 
 
 // catch 404 and forward to error handler

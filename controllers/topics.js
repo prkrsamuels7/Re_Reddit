@@ -9,6 +9,7 @@ module.exports = {
 function show(req, res) {
   Topic.findById(req.params.id, (err, topic) => {
     Thread.find({ topic: topic._id }, (err, threads) => {
+      console.log(threads);
       res.render('topics/show', { topic, threads })
     })
   })

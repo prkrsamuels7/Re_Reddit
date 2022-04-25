@@ -3,6 +3,7 @@ require('dotenv').config();
 require('./config/database');
 
 const Topic = require('./models/topic');
+const Thread = require('./models/thread');
 
 let topics = [
   {title: 'Coding'},
@@ -23,4 +24,11 @@ async function seedTopics() {
   console.log(seededTopics);
 }
 
-seedTopics();
+async function deleteThreads() {
+  let emptyThreads = await Thread.deleteMany({});
+  console.log(emptyThreads);
+}
+
+// deleteThreads();
+
+// seedTopics();

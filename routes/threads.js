@@ -12,4 +12,5 @@ router.post('/topics/:id/threads', threadsCtrl.create);
 // GET /threads/:id (show functionallity)
 router.get('/threads/:id', threadsCtrl.show);
 
+
 module.exports = router;

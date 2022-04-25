@@ -4,12 +4,10 @@
   <h2><%- topic.title %> </h2>
   <form action="/topics/<%= topic._id %>/threads" method="POST">
     <div class="user-box">
-      <input type="text" name="title" placeholder="title">
-      <!-- <label for="title">title</label> -->
+      <input type="text" name="title" placeholder="title" required>
     </div>
     <div class="user-box">
-      <textarea name="text" name="text" placeholder="text / url"></textarea>
-      <!-- <label for="text">text / url</label> -->
+      <textarea type="text" name="text" placeholder="text/url"></textarea>
     </div>
     <button type="submit">create</button>
   </form>

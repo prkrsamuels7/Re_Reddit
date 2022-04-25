@@ -7,15 +7,23 @@ module.exports = {
   show,
 }
 
+
+
 function show(req, res) {
   Thread.findById(req.params.id, (err, thread) => {
+    console.log(thread.userName)
+    console.log(thread.comments);
     res.render(`threads/show`, { thread })
   })
 }
 
 function create(req, res) {
-  req.body.topic = req.params.id;
-  Thread.create(req.body, function(err, thread) {
+  Topic.findById(req.params.id, (err, topic) => {
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
+    req.body.topic = topic;
+    Thread.create(req.body);
     res.redirect(`/topics/${req.params.id}`);
   })
 }

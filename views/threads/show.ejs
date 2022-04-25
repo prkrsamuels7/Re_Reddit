@@ -1,4 +1,15 @@
 <%- include('../partials/header.ejs') %> 
 <%- include('../partials/nav.ejs') %> 
-
+<h4><%= thread.title %></h4>
+<form action="/threads/<%= thread._id %>/comments" method="POST">
+  <textarea name="text" placeholder="add comment"></textarea>
+  <button type="submit">post comment</button>
+</form>
+<div>
+  <% thread.comments.forEach(comment => { %>
+    <div>
+      <p><%= comment.text %> </p>
+    </div>
+  <% }) %>
+</div>
 <%- include('../partials/footer.ejs') %> 
