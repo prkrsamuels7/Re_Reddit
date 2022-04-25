@@ -9,7 +9,7 @@ let topics = [
   {title: 'Sports'},
   {title: 'Gaming'},
   {title: 'DIY'},
-  {title: 'Fitnes'},
+  {title: 'Fitness'},
   {title: 'Technology'},
   {title: 'World News'},
   {title: 'Cryptocurrency'}

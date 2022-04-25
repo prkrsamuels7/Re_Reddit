@@ -18,6 +18,7 @@ body {
   height: 100vh;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Work Sans', sans-serif;
+  /* background: linear-gradient(var(--main-bg-color), var(--dark-vanilla)); */
   background-color: var(--main-bg-color);
 }
 
@@ -109,4 +110,140 @@ nav a {
 .container > *:hover {
   background-color: #E98074;
   color: var(--main-bg-color)
+}
+
+.topics-header {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--nav-text-color);
+}
+
+.add-topic-btn .tool-tip{
+  visibility: hidden;
+  width: 30px;
+  top: 9%;
+  right: 1%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-size: .6rem;
+
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.add-topic-btn:hover .tool-tip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.new-topic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding:40px;
+  margin-top: 30px;
+  transform: translate(-50%, -50%);
+  /* background: var(--text-color); */
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  border-radius: 1px;
+}
+
+
+.new-topic h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: var(--soft-red);
+  text-align: center;
+}
+
+.new-topic .user-box {
+  position: relative;
+}
+
+.new-topic .user-box input, textarea{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  outline: none;
+  background: var(--text-color);
+}
+
+
+.new-topic form button {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  color: var(--soft-red);
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 4px
+}
+
+.new-topic button:hover {
+  cursor: pointer;
+  background: var(--soft-red);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--nav-color),
+              0 0 25px var(--nav-color),
+              0 0 50px var(--nav-color),
+              0 0 100px var(--nav-color);
+}
+
+.topic-show-title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.thread-list {
+  display: grid;
+  grid-template-columns: 30% 1fr 30%;
+
+}
+.topic-thread {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  color: var(--nav-text-color);
+  border: 1px solid var(--text-color);
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.topic-thread h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.thread-options {
+  width: 100%;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.topic-thread p {
+  font-size: 12px;
+  /* font-weight: bold; */
+}
+
+.thread-options img {
+  width: 1rem;
 }

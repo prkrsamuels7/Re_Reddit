@@ -1,0 +1,17 @@
+<%- include('../partials/header.ejs') %> 
+<%- include('../partials/nav.ejs') %> 
+<div class="new-topic">
+  <h2><%- topic.title %> </h2>
+  <form action="/topics/<%= topic._id %>/threads" method="POST">
+    <div class="user-box">
+      <input type="text" name="title" placeholder="title">
+      <!-- <label for="title">title</label> -->
+    </div>
+    <div class="user-box">
+      <textarea name="text" name="text" placeholder="text / url"></textarea>
+      <!-- <label for="text">text / url</label> -->
+    </div>
+    <button type="submit">create</button>
+  </form>
+</div>
+<%- include('../partials/footer.ejs') %> 

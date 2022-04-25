@@ -1,11 +1,10 @@
 <%- include('../partials/header.ejs') %> 
 <%- include('../partials/nav.ejs') %> 
+<h3 class="topics-header">featured topics</h3>
 <div class="container">
   <% topics.forEach(topic => { %>
-    <a href="" class="topic">
-      <!-- <div class="topic"> -->
+    <a href="/topics/<%- topic._id %>" class="topic">
         <%- topic.title %> 
-      <!-- </div> -->
     </a>
   <% }) %>
 </div>
