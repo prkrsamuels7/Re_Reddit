@@ -21,7 +21,7 @@ const threadSchema = new Schema({
   userName: String,
   userAvatar: String,
   comments: [commentSchema],
-  likes: { Number }
+  likes: { type: Number }
 }, 
   { timestamps: true }
 );

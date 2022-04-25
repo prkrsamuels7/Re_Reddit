@@ -22,10 +22,14 @@
 <div class="thread-list">
   <% threads.forEach(thread => { %>
     <div class="topic-thread">
+      <div class="profile">
+        </a><img src="<%= thread.userAvatar %>"alt="avatar"><%= thread.userName %>
+      </div>
       <h2><%= thread.title %></h2>
       <p><%= thread.text %></p>
       <div class="thread-options">
         <a href="/threads/<%- thread.id %>"><img class="comment-bubble" src="/images/comment-bubble.svg" alt="comment-bubble"></a>
+        <a href=""><img src="/images/thumbs-up-solid.svg" alt=""></a>
       </div>
     </div>
   <% }) %>

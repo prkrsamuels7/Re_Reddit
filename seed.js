@@ -29,6 +29,6 @@ async function deleteThreads() {
   console.log(`Threads ${emptyThreads} deleted`);
 }
 
-deleteThreads();
+// deleteThreads();
 
 // seedTopics();

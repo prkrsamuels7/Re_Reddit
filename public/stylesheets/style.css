@@ -167,7 +167,7 @@ nav a {
   position: relative;
 }
 
-.new-topic .user-box input, textarea{
+.new-topic .user-box input, .new-topic .user-box textarea{
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -177,6 +177,7 @@ nav a {
   outline: none;
   background: var(--text-color);
 }
+
 
 
 .new-topic form button {
@@ -203,17 +204,18 @@ nav a {
               0 0 100px var(--nav-color);
 }
 
-.topic-show-title {
+.topic-show-title, .thread-show-title {
   text-align: center;
   margin-bottom: 15px;
 }
 
-.thread-list {
+.thread-list, .comment-list {
   display: grid;
   grid-template-columns: 30% 1fr 30%;
 
 }
-.topic-thread {
+
+.topic-thread, .comment {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -231,11 +233,11 @@ nav a {
   margin-bottom: 10px;
 }
 
-.thread-options {
+.thread-options, .comment-options {
   width: 100%;
   float: right;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-top: 10px;
 }
 
@@ -244,6 +246,42 @@ nav a {
   /* font-weight: bold; */
 }
 
-.thread-options img {
+.thread-options img, .comment img, .profile img{
   width: 1rem;
+}
+
+.new-comment {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.comment-form > textarea {
+  width: 20rem;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: var(--text-color);
+}
+
+.comment-form > button {
+  display: block;
+  margin-top: 0;
+}
+
+.profile {
+  width: 100%;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.profile img {
+  margin-right: 5px;
+}
+
+.comment-options input {
+  width: .8rem;
 }
