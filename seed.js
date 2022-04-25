@@ -26,9 +26,9 @@ async function seedTopics() {
 
 async function deleteThreads() {
   let emptyThreads = await Thread.deleteMany({});
-  console.log(emptyThreads);
+  console.log(`Threads ${emptyThreads} deleted`);
 }
 
-// deleteThreads();
+deleteThreads();
 
 // seedTopics();
