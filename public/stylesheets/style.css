@@ -24,6 +24,7 @@ body {
 
 a, ul, p, h1, h2, h3 {
   text-decoration: none;
+  word-break: break-word;
 }
 
 nav {
@@ -212,7 +213,6 @@ nav a {
 .thread-list, .comment-list {
   display: grid;
   grid-template-columns: 30% 1fr 30%;
-
 }
 
 .topic-thread, .comment {
@@ -226,6 +226,9 @@ nav a {
   border: 1px solid var(--text-color);
   grid-column-start: 2;
   grid-column-end: 3;
+  max-width: 30rem;
+  word-wrap: break-word;
+ 
 }
 
 .topic-thread h2 {
@@ -237,9 +240,15 @@ nav a {
   width: 100%;
   float: right;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   margin-top: 10px;
 }
+
+.thread-options > *, .comment-options > * {
+  margin: 0 5px;
+}
+
+
 
 .topic-thread p {
   font-size: 12px;
@@ -284,4 +293,8 @@ nav a {
 
 .comment-options input {
   width: .8rem;
+}
+
+textarea {
+  resize: none;
 }
