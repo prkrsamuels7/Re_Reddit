@@ -213,6 +213,7 @@ nav a {
 .thread-list, .comment-list {
   display: grid;
   grid-template-columns: 30% 1fr 30%;
+  place-items: center;
 }
 
 .topic-thread, .comment {
