@@ -214,6 +214,7 @@ nav a {
   display: grid;
   grid-template-columns: 30% 1fr 30%;
   place-items: center;
+  padding: 2rem;
 }
 
 .topic-thread, .comment {
@@ -229,6 +230,7 @@ nav a {
   grid-column-end: 3;
   max-width: 30rem;
   word-wrap: break-word;
+  width: 100%;
  
 }
 
@@ -308,14 +310,24 @@ textarea {
   resize: none;
 }
 
-@media screen and (max-width: 450px) {
+@media (max-width: 420px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    column-gap: 3rem;
-    row-gap: 3rem;
-    margin-top: 6rem;
+    grid-template-columns: 8rem 8rem;
+    grid-template-rows: 8rem 8rem 8rem 8rem;
+    margin-top: 3rem;
     justify-content: center;
+  }
+  .nav-links {
+    font-size: .6rem;
+  }
+  .thread-list, .comment-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    padding: 2rem;
+  }
+  .comment {
+    width: 100%;
   }
 }
