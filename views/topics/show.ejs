@@ -8,6 +8,7 @@
     <a href="/topics" class="center">TOPICS</a>
     <% if (user) { %>
       <a href="/logout" class="center">LOGOUT</a>
+      <a href="/users/<%= user._id %>">PROFILE</a>
     <% } else { %>
       <a href="/auth/google" class="center">LOG IN</a>
     <% } %>

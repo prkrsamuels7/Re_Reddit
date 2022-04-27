@@ -238,10 +238,10 @@ nav a {
 
 .thread-options, .comment-options {
   width: 100%;
-  float: right;
   display: flex;
   justify-content: end;
   margin-top: 10px;
+  align-items: baseline;
 }
 
 .thread-options > *, .comment-options > * {
@@ -292,7 +292,15 @@ nav a {
 }
 
 .comment-options input {
-  width: .8rem;
+  width: 1rem;
+  aspect-ratio: 1;
+}
+
+.profile-img {
+  width: 1rem;
+  height: 1rem;
+  margin-top: .4rem;
+  margin-left: .2rem;
 }
 
 textarea {

@@ -1,0 +1,55 @@
+<%- include('../partials/header.ejs') %> 
+<nav>
+  <div class="site-title">
+    <a href="/"><h3>Re-Redit</h3></a>
+  </div>
+  <div class="nav-links">
+    <a href="/" class="center">HOME</a>
+    <a href="/topics" class="center">TOPICS</a>
+    <% if (user) { %>
+      <a href="/logout" class="center">LOGOUT</a>
+      </a><img class="profile-img" src="<%= user.avatar %>"alt="avatar">
+    <% } else { %>
+      <a href="/auth/google" class="center">LOG IN</a>
+    <% } %>
+  </div>
+</nav>
+<div class="profile">
+</div>
+<h2 class="thread-show-title">Your Threads</h2>
+<div class="comment-list">
+  <% threads.forEach(thread => { %>
+    <div class="comment">
+      <h3><%= thread.title %> </h3>
+      <p><%= thread.text %></p>
+      <div class="thread-options">
+        <a href="/threads/<%- thread.id %>"><img class="comment-bubble" src="/images/comment-bubble.svg" alt="comment-bubble"></a>
+        <a href=""><img src="/images/thumbs-up-solid.svg" alt=""></a>
+      </div>
+    </div>
+  <% }) %>
+</div>
+<h2 class="thread-show-title">Your Comments</h2>
+<div class ='comment-list'>
+  <% threads.forEach(thread => { %>
+    <% thread.comments.forEach(comment => { %>
+      <div class="comment">
+        <p><%= thread.text %></p>
+        <div class="comment-options">
+          <form action="/comments/<%= comment._id %>?_method=DELETE" method="POST">
+            <input type="image" src="/images/trash-can-solid.svg" alt="delete">
+          </form>
+          <input type="image" src="/images/edit-pen.svg" name="edit" alt="edit comment" onclick="toggleEdit()">
+          <a href=""><img src="/images/thumbs-up-solid.svg" alt=""></a>
+        </div>
+      </div>
+    <% }) %>
+  <% }) %>
+</div>
+      
+      
+      
+      <%- include('../partials/footer.ejs') %> 
+      
+      
+      
