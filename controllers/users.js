@@ -7,6 +7,14 @@ module.exports = {
 
 async function show(req, res) {
   const user = await User.findById(req.params.id);
-  const threads = await Thread.find({user: req.user.id}).sort('topic -createdAt');
-  res.render('users/show', {user, threads});
+  const threads = await Thread.find({user: req.user._id}).sort('topic -createdAt');
+  const userCommentedThreads = await Thread.find({'comments.user': req.user._id});
+  const comments = [];
+  userCommentedThreads.forEach((thread) => {
+    thread.comments.forEach((comment) => {
+      if (comment.user === req.params.id) comments.push(comment)
+    })
+  })
+  console.log(comments);
+  res.render('users/show', {user, threads, comments});
 }
