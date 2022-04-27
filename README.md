@@ -7,7 +7,7 @@
   <h1>:space_invader: :robot: Re-Reddit :robot: :space_invader: </h1>
   <h3>https://re-reddit7.herokuapp.com/</h3>
   <h5>Parker Samuels</h5>`                             
-  <a href= target="https://github.com/prkrsamuels7"_blank">
+  <a href="https://github.com/prkrsamuels7"_target="_blank">
     <img src="https://img.shields.io/badge/-Portfolio:_prkrsamuels.github.io-darkgreen?style=flat&logo=medium"/>
   </a>
   <a href="https://www.linkedin.com/in/parkersamuels/" target="_blank">
@@ -15,6 +15,9 @@
   </a> 
   <a href="prkrsamuels@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/-prkrsamuels@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
+  </a>
+    <a href="https://github.com/prkrsamuels7"_target="_blank">
+    <img src="https://img.shields.io/badge/-Portfolio:_prkrsamuels.github.io-darkgreen?style=flat&logo=medium"/>
   </a>
 </div>
 
@@ -70,6 +73,7 @@
 ![VSCode](https://img.shields.io/badge/-VS_Code-333?style=flat&logo=visualstudio) 
 
 <h2> :atom_symbol: Getting Started </h2>
+<a href="https://trello.com/b/OR39ZP8b/rereddit">Trello</a>
 
 <h3> :calling: Instructions </h3>
 <details open>
