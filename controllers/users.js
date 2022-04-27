@@ -12,13 +12,9 @@ async function show(req, res) {
   const comments = [];
   userCommentedThreads.forEach((thread) => {
     thread.comments.forEach((comment) => {
-      console.log(comment.user);
-      console.log(req.user.id);
       if (comment.user.equals(req.params.id)){
-        console.log(comment);
         comments.push(comment);
       }
-        
     })
   })
    console.log(comments);
