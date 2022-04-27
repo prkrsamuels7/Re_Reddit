@@ -1,6 +1,6 @@
 <link rel="images" href="images">
 <div align="center">
-   <img src="images/checkers-readme-banner.jpg" width="800" height="400" />
+   <img src="public/images/readMeBackground.jpg" width="800" height="400" />
 </div>
 
 <div align="center">
