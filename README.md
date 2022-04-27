@@ -5,9 +5,9 @@
 
 <div align="center">
   <h1>:space_invader: :robot: Re-Reddit :robot: :space_invader: </h1>
-  <h3>https://prkrsamuels7.github.io/checkers/</h3>
+  <h3>https://re-reddit7.herokuapp.com/</h3>
   <h5>Parker Samuels</h5>`                             
-  <a href=https://re-reddit7.herokuapp.com/ target="_blank">
+  <a href= target="https://github.com/prkrsamuels7"_blank">
     <img src="https://img.shields.io/badge/-Portfolio:_prkrsamuels.github.io-darkgreen?style=flat&logo=medium"/>
   </a>
   <a href="https://www.linkedin.com/in/parkersamuels/" target="_blank">
