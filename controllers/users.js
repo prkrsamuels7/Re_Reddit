@@ -12,9 +12,17 @@ async function show(req, res) {
   const comments = [];
   userCommentedThreads.forEach((thread) => {
     thread.comments.forEach((comment) => {
-      if (comment.user === req.params.id) comments.push(comment)
+      // console.log(comment);
+      console.log(comment.user);
+      console.log(req.user.id);
+      if (comment.user === req.params.id){
+        console.log(comment);
+        comments.push(comment);
+      }
+        
     })
   })
+  // console.log(userCommentedThreads);
   console.log(comments);
   res.render('users/show', {user, threads, comments});
 }
