@@ -4,7 +4,7 @@
 </div>
 
 <div align="center">
-  <h1>:space_invader: :robot: Checkers :robot: :space_invader: </h1>
+  <h1>:space_invader: :robot: Re-Reddit :robot: :space_invader: </h1>
   <h3>https://prkrsamuels7.github.io/checkers/</h3>
   <h5>Parker Samuels</h5>`                             
   <a href=https://re-reddit7.herokuapp.com/ target="_blank">
