@@ -5,8 +5,7 @@
 
 <div align="center">
   <h1>:space_invader: :robot: Re-Reddit :robot: :space_invader: </h1>
-  <h3>https://re-reddit7.herokuapp.com/</h3>
-  <h5>Parker Samuels</h5>`                             
+  <h3>Parker Samuels</h3>`                             
   <a href="https://github.com/prkrsamuels7"_target="_blank">
     <img src="https://img.shields.io/badge/-Portfolio:_prkrsamuels.github.io-darkgreen?style=flat&logo=medium"/>
   </a>
@@ -16,34 +15,13 @@
   <a href="prkrsamuels@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/-prkrsamuels@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
   </a>
-    <a href="https://github.com/prkrsamuels7"_target="_blank">
-    <img src="https://img.shields.io/badge/-Portfolio:_prkrsamuels.github.io-darkgreen?style=flat&logo=medium"/>
-  </a>
 </div>
 
 
 <h1>:pencil: Description</h1>
 <p align="center" >Message Board</p>
 
-<details> 
-<summary> :bar_chart: ERD</summary>
-
-  | Description | Screenshot |
-  |------------ | ------------|
-  | <h3 align="center">ERD</h3> | <img src="public/images/ERD.jpeg" width="700"/>
-</details>
-
-<details> 
-<summary> :art: Wireframes</summary>
-
-  | Description | Screenshot |
-  |------------ | ------------|
-  | <h3 align="center">Landing Page</h3> | <img src="public/images/LandingPage.jpeg" width="700"/>
-  | <h3 align="center">Topics page</h3> | <img src="public/images/TopicIndex.jpeg" width="700"/>
-  | <h3 align="center">Thread Page</h3> | <img src="public/images/ShowView.jpeg" width="700"/>
-</details>
-
-<details open>
+<details>
 <summary> :gear: Functionality</summary>
 
   | Description | Screenshot |
@@ -74,6 +52,7 @@
 
 <h2> :atom_symbol: Getting Started </h2>
 <a href="https://trello.com/b/OR39ZP8b/rereddit">Trello</a>
+<a href="https://re-reddit7.herokuapp.com/">Deployed Heroku App</a>
 
 <h3> :calling: Instructions </h3>
 <details open>
