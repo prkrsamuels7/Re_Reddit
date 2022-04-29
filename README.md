@@ -31,7 +31,7 @@
   | <h3 align="center">Individual Topic</h3> | <img src="public/images/_Topic.png" width="700"/>
   | <h3 align="center">New Thread</h3> | <img src="public/images/newThread.png" width="700"/>
   | <h3 align="center">Individual Thread</h3> | <img src="public/images/Thread.png" width="700"/>
-  | <h3 align="center">User Posts</h3> | <img src="images/userThreads.png" width="700"/>
+  | <h3 align="center">User Posts</h3> | <img src="public/images/userThreads.png" width="700"/>
 </details>
 
 ## :computer: Technologies Used
