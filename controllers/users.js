@@ -17,6 +17,5 @@ async function show(req, res) {
       }
     })
   })
-   console.log(comments);
   res.render('users/show', {user, threads, comments});
 }

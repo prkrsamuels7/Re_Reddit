@@ -15,7 +15,7 @@ function show(req, res) {
 }
 
 function index(req, res) {
-  Topic.find({}, function(err, topics) {
+  Topic.find({}, (err, topics) => {
     res.render('topics/index', { topics })
   })
 }
