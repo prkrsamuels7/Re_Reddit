@@ -46,9 +46,9 @@ const isLoggedIn =require('./config/auth');
 
 app.use('/', indexRouter);
 app.use('/topics', isLoggedIn, topicsRouter);
-app.use('/', threadsRouter);
-app.use('/', commentsRouter);
-app.use('/users', usersRouter);
+app.use('/', isLoggedIn, threadsRouter);
+app.use('/', isLoggedIn, commentsRouter);
+app.use('/users',isLoggedIn, usersRouter);
 
 
 // catch 404 and forward to error handler
